@@ -241,7 +241,7 @@ class Epsilon_Dashboard_Setup {
 				'integration' => true,
 				'recommended' => false,
 			),
-			'immigration-companion' => array(
+			'immigration' => array(
 				'integration' => true,
 				'recommended' => false,
 			),
@@ -266,7 +266,7 @@ class Epsilon_Dashboard_Setup {
 
 		if ( ! $integrated ) {
 			unset( $arr['contact-form-7'] );
-			unset( $arr['immigration-companion'] );
+			unset( $arr['immigration'] );
 			unset( $arr['elementor'] );
 			unset( $arr['one-click-demo-import'] );
 		}
@@ -301,16 +301,16 @@ class Epsilon_Dashboard_Setup {
 			),
 			array(
 				'id'          => 'immigration-check-ac',
-				'title'       => Epsilon_Init_Notify_System::plugin_verifier( 'immigration-companion', 'title', 'Immigration Companion' ),
-				'description' => Epsilon_Init_Notify_System::plugin_verifier( 'immigration-companion', 'description', 'Immigration Companion' ),
-				'plugin_slug' => 'immigration-companion',
+				'title'       => Epsilon_Init_Notify_System::plugin_verifier( 'immigration', 'title', 'Immigration Companion' ),
+				'description' => Epsilon_Init_Notify_System::plugin_verifier( 'immigration', 'description', 'Immigration Companion' ),
+				'plugin_slug' => 'immigration',
 				'state'       => false,
 				'check'       => defined( 'IMMIGRATION_COMPANION_VERSION' ),
 				'actions'     => array(
 					array(
-						'label'   => Epsilon_Init_Notify_System::plugin_verifier( 'immigration-companion', 'installed', 'Immigration Companion' ) ? __( 'Activate Plugin', 'immigration' ) : __( 'Install Plugin', 'immigration' ),
+						'label'   => Epsilon_Init_Notify_System::plugin_verifier( 'immigration', 'installed', 'Immigration Companion' ) ? __( 'Activate Plugin', 'immigration' ) : __( 'Install Plugin', 'immigration' ),
 						'type'    => 'handle-plugin',
-						'handler' => Epsilon_Init_Notify_System::plugin_verifier( 'immigration-companion', 'installed', 'Immigration Companion' ),
+						'handler' => Epsilon_Init_Notify_System::plugin_verifier( 'immigration', 'installed', 'Immigration Companion' ),
 					),
 				),
 			),
@@ -371,9 +371,9 @@ class Epsilon_Dashboard_Setup {
 			),
 			array(
 				'id'          => 'immigration-check-ac',
-				'title'       => Epsilon_Init_Notify_System::plugin_verifier( 'immigration-companion', 'title', 'Immigration Companion' ),
-				'description' => Epsilon_Init_Notify_System::plugin_verifier( 'immigration-companion', 'description', 'Immigration Companion' ),
-				'plugin_slug' => 'immigration-companion',
+				'title'       => Epsilon_Init_Notify_System::plugin_verifier( 'immigration', 'title', 'Immigration Companion' ),
+				'description' => Epsilon_Init_Notify_System::plugin_verifier( 'immigration', 'description', 'Immigration Companion' ),
+				'plugin_slug' => 'immigration',
 				'check'       => defined( 'IMMIGRATION_COMPANION_VERSION' ),
 			),
 			array(

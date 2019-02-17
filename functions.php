@@ -69,6 +69,11 @@ if( ! defined( 'IMMIGRATION_DIR_PATH_WIDGET' ) ) {
 	define( 'IMMIGRATION_DIR_PATH_WIDGET', IMMIGRATION_DIR_PATH_INC.'widgets/' );
 }
 
+//Companion Folder Directory
+if( ! defined( 'IMMIGRATION_DIR_PATH_COMPANION' ) ) {
+	define( 'IMMIGRATION_DIR_PATH_COMPANION', IMMIGRATION_DIR_PATH_INC . 'immigration-companion/' );
+}
+
 
 /**
  * Include File
@@ -88,6 +93,7 @@ require_once( IMMIGRATION_DIR_PATH_CLASSES . 'Class-Enqueue.php' );
 require_once( IMMIGRATION_DIR_PATH_CLASSES . 'Class-Config.php' );
 require_once( IMMIGRATION_DIR_PATH_HOOKS . 'hooks.php' );
 require_once( IMMIGRATION_DIR_PATH_HOOKS . 'hooks-functions.php' );
+require_once( IMMIGRATION_DIR_PATH_COMPANION . 'immigration-companion.php' );
 require_once( IMMIGRATION_DIR_PATH_INC . 'class-epsilon-dashboard-autoloader.php' );
 require_once( IMMIGRATION_DIR_PATH_INC . 'class-epsilon-init-dashboard.php' );
 
