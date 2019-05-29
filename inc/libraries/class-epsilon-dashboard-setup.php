@@ -241,10 +241,6 @@ class Epsilon_Dashboard_Setup {
 				'integration' => true,
 				'recommended' => false,
 			),
-			'immigration' => array(
-				'integration' => true,
-				'recommended' => false,
-			),
 			'elementor' => array(
 				'integration' => true,
 				'recommended' => false,
@@ -266,7 +262,6 @@ class Epsilon_Dashboard_Setup {
 
 		if ( ! $integrated ) {
 			unset( $arr['contact-form-7'] );
-			unset( $arr['immigration'] );
 			unset( $arr['elementor'] );
 			unset( $arr['one-click-demo-import'] );
 		}
@@ -296,21 +291,6 @@ class Epsilon_Dashboard_Setup {
 						'label'   => Epsilon_Init_Notify_System::plugin_verifier( 'contact-form-7', 'installed', 'Contact Form 7', 'verify_cf7' ) ? __( 'Activate Plugin', 'immigration' ) : __( 'Install Plugin', 'immigration' ),
 						'type'    => 'handle-plugin',
 						'handler' => Epsilon_Init_Notify_System::plugin_verifier( 'contact-form-7', 'installed', 'Contact Form 7', 'verify_cf7' ),
-					),
-				),
-			),
-			array(
-				'id'          => 'immigration-check-ac',
-				'title'       => Epsilon_Init_Notify_System::plugin_verifier( 'immigration', 'title', 'Immigration Companion' ),
-				'description' => Epsilon_Init_Notify_System::plugin_verifier( 'immigration', 'description', 'Immigration Companion' ),
-				'plugin_slug' => 'immigration',
-				'state'       => false,
-				'check'       => defined( 'IMMIGRATION_COMPANION_VERSION' ),
-				'actions'     => array(
-					array(
-						'label'   => Epsilon_Init_Notify_System::plugin_verifier( 'immigration', 'installed', 'Immigration Companion' ) ? __( 'Activate Plugin', 'immigration' ) : __( 'Install Plugin', 'immigration' ),
-						'type'    => 'handle-plugin',
-						'handler' => Epsilon_Init_Notify_System::plugin_verifier( 'immigration', 'installed', 'Immigration Companion' ),
 					),
 				),
 			),
@@ -368,13 +348,6 @@ class Epsilon_Dashboard_Setup {
 				'description' => Epsilon_Init_Notify_System::plugin_verifier( 'contact-form-7', 'description', 'Contact Form 7', 'verify_cf7' ),
 				'plugin_slug' => 'contact-form-7',
 				'check'       => defined( 'WPCF7_VERSION' ),
-			),
-			array(
-				'id'          => 'immigration-check-ac',
-				'title'       => Epsilon_Init_Notify_System::plugin_verifier( 'immigration', 'title', 'Immigration Companion' ),
-				'description' => Epsilon_Init_Notify_System::plugin_verifier( 'immigration', 'description', 'Immigration Companion' ),
-				'plugin_slug' => 'immigration',
-				'check'       => defined( 'IMMIGRATION_COMPANION_VERSION' ),
 			),
 			array(
 				'id'          => 'immigration-check-elementor',
