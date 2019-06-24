@@ -75,6 +75,15 @@ if( ! defined( 'IMMIGRATION_DIR_PATH_COMPANION' ) ) {
 }
 
 
+
+// Admin Enqueue script
+function immigration_admin_script(){
+    wp_enqueue_style( 'immigration-admin', get_template_directory_uri().'/assets/css/immigration_admin.css', false, '1.0.0' );
+    wp_enqueue_script( 'immigration_admin', get_template_directory_uri().'/assets/js/immigration_admin.js', false, '1.0.0' );
+}
+add_action( 'admin_enqueue_scripts', 'immigration_admin_script' );
+
+
 /**
  * Include File
  *
