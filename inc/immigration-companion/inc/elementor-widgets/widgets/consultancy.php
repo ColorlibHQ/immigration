@@ -409,7 +409,7 @@ class Consultancy extends Widget_Base {
                             <select name="ucompany">
                                 <option value="" disabled selected hidden><?php esc_attr_e( 'Company Type', 'immigration' ) ?></option>
                                 <?php
-                                $companytypes = unserialize( get_option( 'companytypes' ) );
+                                $companytypes = unserialize( get_option( 'companytypes' ), array( 'allowed_classes' => false ) );
                                 if( is_array( $companytypes ) && count( $companytypes ) > 0 ) {
                                     foreach( $companytypes as $val ) {
                                         echo '<option value="' .esc_attr( $val ). '">' . esc_html( $val ) . '</option>';

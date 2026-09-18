@@ -94,7 +94,7 @@ function immigration_booking_settings_form() {
         <div class="clearfix"></div>
         <?php 
         
-        $companytypes = unserialize( get_option( 'companytypes' ) );
+        $companytypes = unserialize( get_option( 'companytypes' ), array( 'allowed_classes' => false ) );
 
         if( is_array( $companytypes ) ):
 
