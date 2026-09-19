@@ -105,7 +105,7 @@ function immigration_booking_settings_form() {
         <div class="items" data-group="companytypes">
             <!-- Repeater Content -->
             <div class="item-content">
-                <div class="form-group">
+                <div class="mb-3">
                     <label for="inputEmail" class="col-lg-2 control-label"><?php esc_html_e( 'Company Type', 'immigration' ); ?></label>
                     <div class="col-lg-10">
                         <input type="text" class="form-control" value="<?php echo $val; ?>" id="inputName" placeholder="Company Type" data-name="name">
@@ -128,7 +128,7 @@ function immigration_booking_settings_form() {
         <div class="items" data-group="companytypes">
             <!-- Repeater Content -->
             <div class="item-content">
-                <div class="form-group">
+                <div class="mb-3">
                     <label for="inputEmail" class="col-lg-2 control-label"><?php esc_html_e( 'Company Type', 'immigration' ); ?></label>
                     <div class="col-lg-10">
                         <input type="text" class="form-control" id="inputName" placeholder="Company Type" data-name="name">
@@ -193,7 +193,7 @@ function immigration_booking_lists() {
 
 
     if( $uname ) {
-        echo '<li style="padding: 8px;background-color:#f8f8f8;">'.esc_html( $uname ).'<span style="margin-left: 30px;">'.esc_html( $companytypes ).'</span><span style="float:right;"><button class="view-booking" data-target="modal-'.esc_attr( $list->ID ).'" >'.esc_html__( 'View', 'immigration' ).'</button></span>'.immigration_booking_admin_modal( $list->ID ).'</li>';
+        echo '<li style="padding: 8px;background-color:#f8f8f8;">'.esc_html( $uname ).'<span style="margin-left: 30px;">'.esc_html( $companytypes ).'</span><span style="float:right;"><button class="view-booking" data-bs-target="modal-'.esc_attr( $list->ID ).'" >'.esc_html__( 'View', 'immigration' ).'</button></span>'.immigration_booking_admin_modal( $list->ID ).'</li>';
     }
         
     }
@@ -205,7 +205,7 @@ function immigration_booking_lists() {
 
             $( '.view-booking' ).on( 'click', function() {
 
-                var modal = $(this).attr( 'data-target' );
+                var modal = $(this).attr( 'data-bs-target' );
 
                 $('.' + modal ).show();
 
