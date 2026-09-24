@@ -296,11 +296,7 @@ if ( !class_exists( 'Immigration_El_Widgets' ) ) {
             // ajaxchimp js
             wp_enqueue_script( 'jquery-ajaxchimp', IMMIGRATION_COMPANION_EL_URL . 'assets/js/jquery.ajaxchimp.min.js', array('jquery'), '1.0', true );
 
-            // jquery waypoints js
-            wp_enqueue_script( 'waypoints', IMMIGRATION_COMPANION_EL_URL . 'assets/js/waypoints.min.js', array('jquery'), '1.0', true );
 
-            // jquery counterup js
-            wp_enqueue_script( 'jquery-counterup', IMMIGRATION_COMPANION_EL_URL . 'assets/js/jquery.counterup.min.js', array('jquery'), '1.0', true );
 
             // owl carousel js
             wp_enqueue_script( 'owl-carousel', IMMIGRATION_COMPANION_EL_URL . 'assets/js/owl.carousel.min.js', array('jquery'), '1.0', true );
@@ -311,7 +307,7 @@ if ( !class_exists( 'Immigration_El_Widgets' ) ) {
             wp_enqueue_script( 'justifiedGallery', IMMIGRATION_COMPANION_EL_URL . 'assets/js/jquery.justifiedGallery.min.js', array('jquery'), '1.0', true );
 
             // immigration companion main js
-            wp_enqueue_script( 'immigration', IMMIGRATION_COMPANION_EL_URL . 'assets/js/immigration-companion-main.js', array( 'jquery', 'jquery-ui-datepicker' ), '1.0', true );
+            wp_enqueue_script( 'immigration', IMMIGRATION_COMPANION_EL_URL . 'assets/js/immigration-companion-main.js', array( 'jquery', 'immigration-ui-js', 'jquery-ui-datepicker' ), '1.0-s1', true);
            
         }
 
