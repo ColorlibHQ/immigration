@@ -188,36 +188,22 @@ final class Immigration {
 				array(
 					'handler'		=> 'immigration-theme-bootstrap',
 					'file' 			=> $jsPath.'bootstrap.min.js',
-					'dependency' 	=> array( 'jquery' ),
+					'dependency' 	=> array(),
 					'version' 		=> '5.3.8-4',
 					'in_footer' 	=> true
 				),
 				array(
-					'handler'		=> 'immigration-theme-jquery-sticky',
-					'file' 			=> $jsPath.'jquery.sticky.js',
-					'dependency' 	=> array( 'jquery' ),
-					'version' 		=> '1.0.0',
-					'in_footer' 	=> true
-				),
-				array(
-					'handler'		=> 'immigration-theme-superfish',
-					'file' 			=> $jsPath.'superfish.min.js',
-					'dependency' 	=> array( 'jquery' ),
-					'version' 		=> '1.7.9',
-					'in_footer' 	=> true
-				),
-				array(
 					'handler'		=> 'immigration-ui-js',
-					'file' 			=> $jsPath.'colorlib-ui.js',
+					'file' 			=> $jsPath . ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? 'colorlib-ui.js' : 'colorlib-ui.min.js' ),
 					'dependency' 	=> array(),
-					'version' 		=> '2.1.1',
+					'version' 		=> '3.0.0',
 					'in_footer' 	=> true
 				),
 				array(
 					'handler'		=> 'immigration-theme-immigration-main',
 					'file' 			=> $jsPath.'main.js',
-					'dependency' 	=> array( 'jquery', 'imagesloaded', 'immigration-ui-js' ),
-					'version' 		=> $this->immigration_version . '-s1',
+					'dependency' 	=> array( 'imagesloaded', 'immigration-ui-js' ),
+					'version' 		=> $this->immigration_version . '-s2',
 					'in_footer' 	=> true
 				),
 			)
@@ -318,7 +304,7 @@ final class Immigration {
 		$had_elementor = get_option( 'immigration_had_elementor' );
 
 		if( $had_elementor == 'no' && self::check_elementor_preview_page() ) {
-			wp_enqueue_script( 'immigration-elementor-notice', IMMIGRATION_DIR_JS_URI.'immigration-elementor-notice.js', array('jquery'), '1.0', true );
+			wp_enqueue_script( 'immigration-elementor-notice', IMMIGRATION_DIR_JS_URI.'immigration-elementor-notice.js', array( 'immigration-ui-js' ), '1.0-s2', true );
 			wp_localize_script(
 				'immigration-elementor-notice',
 				'immigrationElementorNotice',
