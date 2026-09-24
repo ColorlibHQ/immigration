@@ -176,7 +176,7 @@ final class Immigration {
 					'handler'		=> 'immigration-theme-immigration-main',
 					'file' 			=> $cssPath.'main.css',
 					'dependency' 	=> array(),
-					'version' 		=> $this->immigration_version,
+					'version' 		=> $this->immigration_version . '-s3',
 				),
 				array(
 					'handler'		=> 'immigration-theme-immigration-style',
