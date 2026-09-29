@@ -67,7 +67,7 @@ if( $textarea ){
     if( count( $social ) > 0 ){
         foreach( $social as $key => $val ){
             if( $val ){
-                echo '<a href="'.esc_url( $val ).'"><i class="fa fa-'.esc_attr( $key ).'"></i></a>';
+                echo '<a href="'.esc_url( $val ).'"><i class="fa-brands fa-'.esc_attr( $key ).'"></i></a>';
             }
         }
     }

@@ -77,7 +77,7 @@ echo wp_kses_post( $args['before_widget'] );
             echo '<ul>';
             foreach( $social as $key => $val ){
                 if( $val ){
-                    echo '<li><a href="'.esc_url( $val ).'"><i class="fa fa-'.esc_attr( $key ).'"></i></a></li>';
+                    echo '<li><a href="'.esc_url( $val ).'"><i class="fa-brands fa-'.esc_attr( $key ).'"></i></a></li>';
                 }
                 
             }
